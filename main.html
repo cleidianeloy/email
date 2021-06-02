@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <title>email</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* o email não reconhece nosso body*/
+            overflow-x: hidden;
+        }
+
+        #auxiliar {
+            /*auxiliar serve para o email limitar e não cortar nenhuma parte importante do email*/
+            max-width: 600px;
+            /*limite para um email*/
+            min-width: 600px;
+        }
+
+        #tudo {
+            /*como o email não reconhece o body tive que criar essa div para colocar o que eu queria que fosse o body*/
+            padding: 50px;
+            background-image: url('https://media-public.canva.com/MADQ5IZEnCk/1/screen.jpg');
+            /*coloque uma imagem da internet para plano de fundo*/
+            background-size: auto;
+            margin: -50px;
+            /*estava tendo partes brancas que não desapareciam*/
+            max-width: 600px;
+            min-width: 600px;
+
+        }
+
+        #corpo {
+            /*todo o corpo do email que tem a mensagem e a saudação*/
+            margin-top: 30px;
+            background-color: white;
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+            padding: 30px;
+            margin-left: auto;
+            /*para ficar no meio*/
+            margin-right: auto;
+            /*para ficar no meio*/
+            overflow-y: auto;
+        }
+
+        #saudacao {
+            /*se apresentando*/
+            position: relative;
+            font-size: 150%;
+            font-family: 'Open Sans', sans-serif;
+            color: #008037;
+            /*mude a cor se precisar*/
+
+        }
+
+        #mensagem {
+            /*mensagem que queira enviar no email*/
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+            color: #a6a6a6;
+            font-size: 120%;
+            /*mude a fonte se com muito texto ficar desconfortavel */
+            width: 250px;
+            height: 250px;
+            /*altura, mude se precisar colocar mais texto*/
+            word-break: break-word;
+            /*quebra a linha nas palavras (ajuda a não ultrapassar a div pai)*/
+            margin-left: 20px;
+            margin-top: 60px
+        }
+
+        #assinatura {
+            /*assinatura, contendo meu nome e meus contatos*/
+            color: #a6a6a6;
+            /*cor do atenciosamente e das informações*/
+            background-color: white;
+            height: 120px;
+            width: 300px;
+            margin-top: 10%;
+            margin-bottom: 25%;
+            margin-left: auto;
+            /*para ficar no meio*/
+            margin-right: auto;
+            /*para ficar no meio*/
+            padding: 30px;
+            /*espaçamento*/
+            border-radius: 10px;
+            font-family: 'Open Sans', sans-serif;
+
+
+
+        }
+
+        #atenciosamente,
+        #nome {
+
+            font-size: 100%;
+            /*o tamanho tem que ser igual para dois*/
+        }
+
+        #profissao,
+        #email,
+        #telefone {
+            font-size: 100%;
+            margin-bottom: 5%;
+            /*tamanhos iguais*/
+        }
+
+        #nome {
+
+            color: #008037;
+            /* mesma cor que a saudação*/
+        }
+
+        img {
+            /*icones de redes sociais*/
+            width: 35px;
+            height: 35px;
+            display: inline;
+            /*ficar um no lado do outro*/
+            float: right;
+            /*grudados na direita*/
+            margin-left: 15px;
+            /*para eles ficarem reparados*/
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            /*em uma tela de 800px de largura faça: (mudando os tamanhos para uma tela de celular)*/
+            #corpo {
+                width: 180px;
+                height: 500px;
+            }
+
+            #saudacao {
+                font-size: 100%;
+            }
+
+            #mensagem {
+                font-size: 80%;
+                width: 170px;
+                height: 300px;
+                margin-left: 10px;
+            }
+
+            #assinatura {
+                width: 180px;
+                height: 80;
+
+            }
+
+            #atenciosamente,
+            #nome {
+                font-size: 60%;
+            }
+
+            #profissao,
+            #email,
+            #telefone {
+                font-size: 50%;
+
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="auxiliar">
+        <!--auxiliar para ajudar a limitar o que vai no email-->
+        <div id="tudo">
+            <!--fazendo papel de body-->
+
+
+            <div id="corpo">
+                <!--corpo do email, saudação e a mensagem-->
+                <h1 id="saudacao"> Bom dia, tudo bem?</h1>
+                <!--saudação com algo do tipo "bom dia", "olá"-->
+                <p id="mensagem">
+                    <!--mensagem-->
+                    Agradeço seu contato, em anexo estão os documentos que pediu.
+                    <!--duas quebras de linha para ficar separado e bonitinho, não é tão necessario-->
+                    <br><br>Se possivel, me envie uma resposta quando ver e se sinta a vontade de me falar caso algo
+                    esteja errado
+                </p>
+            </div>
+            <div id="assinatura">
+                <!--apresentação-->
+                <span id="atenciosamente">Atenciosamente, </span> <span id="nome">Cleidiane da Rosa Eloy</span><br>
+                <!--coloque seu nome-->
+
+                <span id="profissao">Desenvolvedora</span><br>
+                <!--sua profissão-->
+                <span id="email">cleidianeloy@hotmail.com</span><br>
+                <!--email-->
+                <span id="telefone">+55 (48) 99900-0100</span>
+                <!--telefone-->
+                <div id="redes">
+                    <!--coloque o link do seu instagram-->
+                    <a href="https://www.instagram.com/cleidianeloy/" id="linkInstagram">
+                        <img id="iconeInstagram" src="https://media-public.canva.com/PkCV4/MAB0QgPkCV4/2/s.svg">
+                    </a>
+                    <!--coloque o link do seu linkedin-->
+                    <a href="https://www.linkedin.com/in/cleidiane-eloy" id="linkLinkedin">
+                        <img id="iconeLinkedin" src="https://media-public.canva.com/MADnBogvtPM/3/screen.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
